@@ -1,0 +1,21 @@
+{
+  "name": "react-i18next-phraseapp-demo",
+  "version": "1.0.0",
+  "description": "Demo app to showcase react-i18next-phraseapp",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "phraseapp",
+    "i18n",
+    "l10n",
+    "react",
+    "translation"
+  ],
+  "author": "Manuel Boy",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
