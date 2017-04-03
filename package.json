@@ -4,7 +4,7 @@
   "description": "Demo app to showcase react-i18next-phraseapp",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src -d public/js/lib"
   },
   "keywords": [
     "phraseapp",
@@ -19,5 +19,10 @@
     "express": "^4.15.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-env": "^1.3.2",
+    "babel-preset-react": "^6.23.0"
   }
 }
