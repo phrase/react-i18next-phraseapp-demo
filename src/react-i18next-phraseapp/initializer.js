@@ -18,7 +18,11 @@ class PhraseAppInitializer extends React.Component {
     phraseapp.async = true;
     phraseapp.src = ['https://', 'phraseapp.com/assets/in-context-editor/2.0/app.js?', new Date().getTime()].join('');
     var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(phraseapp, s);
+    if (s != undefined) {
+      s.parentNode.insertBefore(phraseapp, s);
+    } else {
+      document.insertBefore(phraseapp, null);
+    }
   }
 
   render() {
