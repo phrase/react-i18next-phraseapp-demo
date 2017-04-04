@@ -7,7 +7,6 @@ import MyApp from './MyApp';
 import i18n from './i18n';
 
 // PhraseApp Config
-window.PHRASEAPP_ENABLED = true;
 console.log("Setting the config");
 const phraseappConfig = {
   debugMode: false,
