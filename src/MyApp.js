@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { translate } from './react-i18next-phraseapp';
+import { translate, PhraseAppInitializer } from './react-i18next-phraseapp';
 
 class MyApp extends React.Component {
   render() {
-    return <h1>{this.props.t('hello')}, {this.props.name}</h1>;
+    return (
+      <div>
+        <PhraseAppInitializer debugMode={false} projectId="00000000000000004158e0858d2fa45c"></PhraseAppInitializer>
+        <h1>{this.props.t('hello')}, {this.props.name}</h1>
+      </div>
+    );
   }
 }
 
