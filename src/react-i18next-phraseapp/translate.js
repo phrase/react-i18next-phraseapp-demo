@@ -23,5 +23,3 @@ export default function translate (...args) {
     }
   }
 }
-
-module.exports = translate;

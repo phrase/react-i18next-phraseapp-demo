@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import ReactDOM from 'react-dom';
 
 class PhraseAppInitializer extends React.Component {
   componentDidMount() {

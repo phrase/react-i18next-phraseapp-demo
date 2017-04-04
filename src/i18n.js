@@ -1,21 +1,18 @@
 import i18next from 'i18next';
 
-i18next.init({
+const i18n = i18next.init({
   lng: 'en',
   resources: {
     en: {
       translation: {
-        "hello": "Hello"
+        "hello": "Hello",
+        "claim": "The world is yours"
       }
     },
     de: {
       translation: {
-        "hello": "Hallo"
-      }
-    },
-    es: {
-      translation: {
-        "hello": "¡Hola!"
+        "hello": "Hallo",
+        "claim": "Die Welt ist eine Scheibe"
       }
     }
   }
@@ -24,4 +21,4 @@ i18next.init({
   console.log(i18next.t('hello'));
 });
 
-module.exports = i18next
+export default i18n;
