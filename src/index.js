@@ -6,18 +6,9 @@ import { PhraseAppProvider } from './react-i18next-phraseapp';
 import MyApp from './MyApp';
 import i18n from './i18n';
 
-// PhraseApp Config
-console.log("Setting the config");
-const phraseappConfig = {
-  debugMode: false,
-  projectId: "00000000000000004158e0858d2fa45c",
-  prefix: "[[--",
-  suffix: "--]]"
-}
-
 ReactDOM.render(
   <I18nextProvider i18n={ i18n }>
-    <PhraseAppProvider phraseapp={ phraseappConfig }>
+    <PhraseAppProvider config={ window.PHRASEAPP_CONFIG }>
       <MyApp name="Hello World" />
     </PhraseAppProvider>
   </I18nextProvider>,

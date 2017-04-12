@@ -4,15 +4,15 @@ import PhraseAppInitializer from './initializer';
 class PhraseAppProvider extends React.Component {
   constructor(props, context) {
     super(props, context);
-    this.phraseapp = props.phraseapp;
+    this.phraseappConfig = props.config;
   }
 
   getChildContext() {
-    return { phraseapp: this.phraseapp };
+    return { phraseappConfig: this.phraseappConfig };
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.phraseapp !== nextProps.phraseapp) {
+    if (this.props.phraseappConfig !== nextProps.phraseappConfig) {
       throw new Error('[react-i18next-phraseapp][PhraseAppProvider] does not support changing the phraseapp config object');
     }
   }
@@ -24,12 +24,12 @@ class PhraseAppProvider extends React.Component {
 }
 
 PhraseAppProvider.propTypes = {
-  phraseapp: PropTypes.object.isRequired,
+  phraseappConfig: PropTypes.object.isRequired,
   children: PropTypes.element.isRequired
 }
 
 PhraseAppProvider.childContextTypes = {
-  phraseapp: PropTypes.object.isRequired
+  phraseappConfig: PropTypes.object.isRequired
 }
 
 export default PhraseAppProvider;

@@ -3,8 +3,6 @@ import React, {PropTypes} from 'react'
 import {translate as translateI18next} from 'react-i18next'
 
 export default function translate(...args) {
-  console.log("Reading Config");
-
   if (!window.PHRASEAPP_ENABLED) {
     return translateI18next(...args)
   } else {
@@ -12,11 +10,14 @@ export default function translate(...args) {
       class TranslateWithPhraseApp extends React.Component {
         constructor(props, context) {
           super(props, context);
-          this.phraseapp = context.phraseapp;
+          this.phraseappConfig = context.phraseappConfig;
         }
 
         decoratedKeyName(key) {
-          return `${this.phraseapp.prefix}phrase_${key}${this.phraseapp.suffix}`
+          var prefix = this.phraseappConfig.prefix ? this.phraseappConfig.prefix : "[[__";
+          var suffix = this.phraseappConfig.suffix ? this.phraseappConfig.suffix : "__]]";
+
+          return `${prefix}phrase_${key}${suffix}`
         }
 
         render () {
@@ -27,7 +28,7 @@ export default function translate(...args) {
       }
 
       TranslateWithPhraseApp.contextTypes = {
-        phraseapp: PropTypes.object.isRequired
+        phraseappConfig: PropTypes.object.isRequired
       };
 
       return hoistStatics(TranslateWithPhraseApp, WrappedComponent)

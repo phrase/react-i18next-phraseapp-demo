@@ -7,7 +7,14 @@
   <div class="container">
     <div id="root"></div>
     <script>
-    window.PHRASEAPP_ENABLED = false;
+      window.PHRASEAPP_ENABLED = true;
+      window.PHRASEAPP_CONFIG = {
+        projectId: "00000000000000004158e0858d2fa45c",
+        debugMode: true,
+        prefix: "[[--",
+        suffix: "--]]",
+        fullReparse: true,
+      };
     </script>
     <script src="bundle.js"></script>
   </div>

@@ -5,5 +5,5 @@ import PhraseAppProvider from './provider';
 export {
   translate,
   PhraseAppInitializer,
-  PhraseAppProvider
+  PhraseAppProvider,
 };

@@ -3,21 +3,10 @@ import React, { Component, PropTypes } from 'react';
 class PhraseAppInitializer extends React.Component {
   constructor(props, context) {
     super(props, context);
-    this.phraseapp = context.phraseapp;
+    this.phraseappConfig = context.phraseappConfig;
   }
 
   componentDidMount() {
-    const { projectId, autoLowercase, debugMode, prefix, suffix } = this.phraseapp;
-
-    window.PHRASEAPP_CONFIG = {
-      projectId: projectId,
-      autoLowercase: autoLowercase,
-      debugMode: debugMode,
-      prefix: prefix,
-      suffix: suffix
-    }
-
-    console.log("Reading Config from Initializer");
     if (window.PHRASEAPP_ENABLED) {
       const phraseapp = document.createElement('script');
       phraseapp.type = 'text/javascript';
@@ -38,7 +27,7 @@ class PhraseAppInitializer extends React.Component {
 }
 
 PhraseAppInitializer.contextTypes = {
-  phraseapp: PropTypes.object.isRequired
+  phraseappConfig: PropTypes.object
 };
 
 export default PhraseAppInitializer;
