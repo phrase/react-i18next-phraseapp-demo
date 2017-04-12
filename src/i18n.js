@@ -5,22 +5,19 @@ const i18n = i18next.init({
   resources: {
     en: {
       translation: {
-        "hello": "Hello",
-        "claim": "The world is yours",
-        "some_item": "This is from i18next"
+        "headline": "Hello",
+        "foo": "Foo",
+        "bar": "Example"
       }
     },
     de: {
       translation: {
-        "hello": "Hallo",
-        "claim": "Die Welt ist eine Scheibe",
-        "some_item": "Dies kommt von i18next"
+        "headline": "Hallo",
+        "foo": "Test",
+        "bar": "Beispiel"
       }
     }
   }
-}, (err, t) => {
-  // initialized and ready to go!
-  // console.log(i18next.t('hello'));
-});
+}, (err, t) => {});
 
 export default i18n;

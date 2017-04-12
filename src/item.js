@@ -1,11 +1,11 @@
 import React from 'react';
-import { translate } from './react-i18next-phraseapp';
+import { translate } from 'react-i18next-phraseapp';
 
 class Item extends React.Component {
   render() {
     return (
       <div>
-        <p>{this.props.t('some_item')}</p>
+        <p>{this.props.t(this.props.keyName)}</p>
       </div>
     );
   }

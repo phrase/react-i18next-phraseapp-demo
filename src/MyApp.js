@@ -1,5 +1,6 @@
 import React from 'react';
-import { translate, PhraseAppInitializer } from './react-i18next-phraseapp';
+import { translate } from 'react-i18next-phraseapp';
+import { PhraseAppInitializer } from 'react-i18next-phraseapp';
 import Item from './item';
 
 class MyApp extends React.Component {
@@ -7,10 +8,9 @@ class MyApp extends React.Component {
     return (
       <div>
         <PhraseAppInitializer />
-        <h1>{this.props.t('hello')}, {this.props.name}</h1>
-        <h2>{this.props.t('claim')}</h2>
-        <Item />
-        <Item />
+        <h1>{this.props.t('headline')}</h1>
+        <Item keyName="foo" />
+        <Item keyName="bar" />
       </div>
     );
   }
