@@ -4,6 +4,7 @@
   "description": "Demo app to showcase react-i18next-phraseapp",
   "main": "app.js",
   "scripts": {
+    "start": "npm run build && node app.js",
     "build": "webpack --config webpack.config.js"
   },
   "keywords": [

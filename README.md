@@ -14,7 +14,7 @@ The demo project uses the project ID from the [PhraseApp demo project](http://de
 
 Start the server:
 
-    $ node app.js
+    $ npm start
 
 and then open the app at:
 
