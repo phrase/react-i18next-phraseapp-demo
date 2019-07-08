@@ -1,5 +1,5 @@
 import React from 'react';
-import { translate } from 'react-i18next-phraseapp';
+import { withNamespaces } from 'react-i18next-phraseapp';
 import { PhraseAppInitializer } from 'react-i18next-phraseapp';
 import Item from './item';
 
@@ -16,4 +16,4 @@ class MyApp extends React.Component {
   }
 }
 
-export default translate()(MyApp);
+export default withNamespaces()(MyApp);
