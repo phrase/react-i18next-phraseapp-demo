@@ -1,5 +1,5 @@
 import React from 'react';
-import { translate } from 'react-i18next-phraseapp';
+import { withNamespaces } from 'react-i18next-phraseapp';
 
 class Item extends React.Component {
   render() {
@@ -11,4 +11,4 @@ class Item extends React.Component {
   }
 }
 
-export default translate()(Item);
+export default withNamespaces()(Item);
