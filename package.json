@@ -1,6 +1,6 @@
 {
   "name": "react-i18next-phraseapp-demo",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Demo app to showcase react-i18next-phraseapp",
   "main": "app.js",
   "scripts": {
@@ -9,6 +9,7 @@
   },
   "keywords": [
     "phraseapp",
+    "phrase",
     "i18n",
     "l10n",
     "react",
@@ -19,10 +20,10 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
-    "i18next": "^7.1.3",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-i18next": "^8.4.0",
+    "i18next": "^17.2.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.0",
+    "react-i18next": "^10.13.1",
     "react-i18next-phraseapp": "^2.0.0"
   },
   "devDependencies": {
