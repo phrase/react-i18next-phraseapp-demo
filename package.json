@@ -1,13 +1,14 @@
 {
   "name": "react-i18next-phraseapp-demo",
-  "version": "1.1.1",
-  "description": "Demo app to showcase react-i18next-phraseapp",
+  "version": "1.1.2",
+  "description": "DEPRECATED ⛔️ Demo app to showcase react-i18next-phraseapp",
   "main": "app.js",
   "scripts": {
     "start": "webpack --config webpack.config.js --mode development && node app.js",
     "build": "webpack --config webpack.config.js --mode production"
   },
   "keywords": [
+    "deprecated",
     "phraseapp",
     "phrase",
     "i18n",
